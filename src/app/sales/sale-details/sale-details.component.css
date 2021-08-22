@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .size-card {
+    @apply py-4 bg-gray-100 border border-transparent hover:border-green-special rounded-md text-center hover:text-green-special w-16 mx-1 cursor-pointer transition-all duration-300 ease-in-out;
+  }
+
+  .size-card.selected {
+    @apply bg-green-special text-white;
+  }
+}
+
