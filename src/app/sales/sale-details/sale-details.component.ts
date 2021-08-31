@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Nick from '../../../assets/img/nick-TJJ7L2anZLs-unsplash.jpg';
 
 @Component({
   selector: 'app-sale-details',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SaleDetailsComponent implements OnInit {
 
-  item = { id: 1, img: 'assets/img/nick-TJJ7L2anZLs-unsplash.jpg', label: 'Aero flex suit', price: 240, promotion: 50, newPrice: 120 };
+  item = { id: 1, img: Nick, label: 'Aero flex suit', price: 240, promotion: 50, newPrice: 120 };
 
   sizes = [{ id: 1, label: 'XS' },
   { id: 2, label: 'S' },

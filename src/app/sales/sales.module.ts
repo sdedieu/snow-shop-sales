@@ -16,4 +16,4 @@ import { SaleDetailsComponent } from './sale-details/sale-details.component';
     salesRoutingModule
   ]
 })
-export class salesModule { }
+export class SalesModule { }

@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="card__collection clear-fix pt-8">
-        <div class="cards cursor-pointer" *ngFor="let item of items" [routerLink]="'/sales/' + item.id">
+        <div class="cards cursor-pointer" *ngFor="let item of items" [routerLink]="item.id.toString()">
             <img [attr.src]="item.img" class="w-full h-auto" alt="">
             <span class="cards__rect-1">
                 <span class="shadow-1">
