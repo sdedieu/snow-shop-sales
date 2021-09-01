@@ -8,7 +8,7 @@
         </svg>
         <a class="px-2" [routerLink]="['/sales']">Sales</a>
     </div>
-    <h1 class="px-2 py-1 mb-8 text-4xl font-black">Sales</h1>
+    <h1 class="px-2 py-1 mb-8 text-4xl font-black font-mono">Sales</h1>
     <div
         class="font-sans text-2xl border-t-2 border-b-2 h-20 sticky z-50 bg-white px-16 flex flex-row items-center justify-between">
         <div class="flex flex-initial items-center text-center">
@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="card__collection clear-fix pt-8">
-        <div class="cards cursor-pointer" *ngFor="let item of items" [routerLink]="item.id.toString()">
+        <div class="cards cursor-pointer" *ngFor="let item of items$ | async" [routerLink]="item.id.toString()">
             <img [attr.src]="item.img" class="w-full h-auto" alt="">
             <span class="cards__rect-1">
                 <span class="shadow-1">

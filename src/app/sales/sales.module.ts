@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { salesRoutingModule } from './sales-routing.module';
 import { SalesComponent } from './sales.component';
 import { SaleDetailsComponent } from './sale-details/sale-details.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SaleDetailsComponent } from './sale-details/sale-details.component';
   ],
   imports: [
     CommonModule,
-    salesRoutingModule
+    salesRoutingModule,
+    HttpClientModule
   ]
 })
 export class SalesModule { }

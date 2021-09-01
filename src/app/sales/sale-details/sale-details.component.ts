@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import Nick from '../../../assets/img/nick-TJJ7L2anZLs-unsplash.jpg';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-sale-details',
@@ -8,7 +9,7 @@ import Nick from '../../../assets/img/nick-TJJ7L2anZLs-unsplash.jpg';
 })
 export class SaleDetailsComponent implements OnInit {
 
-  item = { id: 1, img: Nick, label: 'Aero flex suit', price: 240, promotion: 50, newPrice: 120 };
+  item: any;
 
   sizes = [{ id: 1, label: 'XS' },
   { id: 2, label: 'S' },
@@ -18,9 +19,12 @@ export class SaleDetailsComponent implements OnInit {
 
   sizeSelected = 0;
 
-  constructor() { }
+  constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.http.get('http://localhost:3000/sales/' + this.route.snapshot.params.saleId).subscribe(
+      item => this.item = item
+    )
   }
 
 }
