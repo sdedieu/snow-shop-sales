@@ -1,17 +1,45 @@
+.breadcrumb-container {
+  @apply px-4 md:px-16
+}
+
 .breadcrumb {
   @apply flex flex-row my-8 font-mono;
 }
 
 .breadcrumb > a {
-  @apply cursor-pointer;
+  @apply cursor-pointer px-2;
+}
+
+.breadcrumb > svg {
+  @apply h-5 w-5;
+}
+
+.title {
+  @apply px-2 py-1 mb-8 text-4xl font-black font-mono
+}
+
+.filter-container {
+  @apply font-sans text-2xl border-t-2 border-b-2 h-20 sticky z-50 bg-white px-16 flex flex-row items-center justify-between
+}
+
+.filter {
+  @apply flex flex-initial items-center text-center
+}
+
+.filter > svg {
+  @apply mx-2 h-6 w-6
 }
 
 .card__collection {
-  @apply grid grid-flow-row grid-cols-4 gap-4;
+  @apply grid grid-flow-row grid-cols-4 gap-4 pt-8;
 }
 
 .cards {
-  @apply bg-cover rounded-md overflow-hidden bg-center relative z-10;
+  @apply bg-cover rounded-md overflow-hidden bg-center relative z-10  cursor-pointer;
+}
+
+.cards > img {
+  @apply w-full h-auto;
 }
 
 .cards:hover .cards__rect-2:before {
@@ -84,6 +112,10 @@
 
 .cards__rect-4 .shadow-2 {
   @apply block absolute w-full h-full flex justify-center items-center text-white  font-mono font-bold transition-all duration-500 ease-in-out delay-200;
+}
+
+.cards__rect-4 .shadow-2 > p {
+  @apply line-through;
 }
 
 .cards__list {

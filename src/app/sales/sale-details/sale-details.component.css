@@ -1,7 +1,79 @@
+.breadcrumb-container {
+  @apply px-4 md:px-16
+}
+
+.breadcrumb {
+  @apply flex flex-row my-8 font-mono;
+}
+
+.breadcrumb > a {
+  @apply cursor-pointer px-2;
+}
+
+.breadcrumb > svg {
+  @apply h-5 w-5;
+}
+
+.product-container {
+  @apply flex flex-row pt-8
+}
+
+.card-container {
+  @apply flex-1
+}
+
+.form-container {
+  @apply flex-1 flex flex-col px-8
+}
+
+.product-label {
+  @apply py-1 mb-8 text-4xl font-black
+}
+
+.review {
+  @apply flex mb-4 flex-row text-xl
+}
+
+.review .star {
+  @apply h-6 w-6
+}
+
+.review .star.yellow {
+@apply text-yellow-300
+}
+
+.review .star.gray {
+  @apply text-gray-300
+}
+
+.review span {
+  @apply px-1 text-gray-500
+}
+
+.price {
+  @apply text-2xl my-4 flex-row
+}
+
+.old-price {
+  @apply line-through
+}
+
+.new-price {
+  @apply text-3xl my-4;
+}
+
+.sizes {
+  @apply flex flex-row my-4
+}
+
 .size-card {
   @apply py-4 bg-gray-100 border border-transparent hover:border-green-special rounded-md text-center hover:text-green-special w-16 mx-1 cursor-pointer transition-all duration-300 ease-in-out;
 }
 
 .size-card.selected {
   @apply bg-green-special text-white;
+}
+
+.form-btn {
+  @apply my-4 py-4 bg-black hover:bg-green-special rounded-md text-white text-xl text-center w-full mx-1 cursor-pointer transition-all duration-300 ease-in-out
 }
